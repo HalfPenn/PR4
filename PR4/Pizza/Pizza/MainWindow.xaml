@@ -1,0 +1,17 @@
+﻿<Window x:Class="Pizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="578" Width="498" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Margin="0,0,0,39">
+        <Image x:Name="imgAction" HorizontalAlignment="Left" Height="202" VerticalAlignment="Top" Width="498" Source="img/action.jpg"/>
+        <Image x:Name="imgDay" HorizontalAlignment="Left" Height="149" Margin="0,202,-80,0" VerticalAlignment="Top" Width="578" Source="img/daypizz.jpg"/>
+        <Image x:Name="imgPeper" HorizontalAlignment="Left" Height="226" Margin="-9,342,-9,-10" VerticalAlignment="Top" Width="508" Source="img/peper.jpg"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="81" Margin="349,0,0,0" VerticalAlignment="Top" Width="141" Source="img/logo.jpg"/>
+        <Button x:Name="btZakaz" Content="Заказать сейчас" HorizontalAlignment="Left" Margin="0,136,0,0" VerticalAlignment="Top" Width="256" Height="52" Background="#FFE69623" FontSize="20" FontFamily="Bodoni MT Poster Compressed" FontWeight="Bold" Click="btZakaz_Click"/>
+        <Border x:Name="bord" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="568" Margin="0,0,0,-29" VerticalAlignment="Top" Width="498" Background="#7F000000" Visibility="Hidden"/>
+    </Grid>
+</Window>

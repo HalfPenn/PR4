@@ -1,0 +1,24 @@
+﻿<Window x:Class="Pizza.windows.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza.windows"
+        mc:Ignorable="d"
+        Title="Window1" Height="250" Width="400" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="#FFD42828">
+        <Label x:Name="lb1" Content="Здесь" HorizontalAlignment="Left" Margin="63,163,0,0" VerticalAlignment="Top" Width="73" Height="39" FontSize="18" FontWeight="Bold"/>
+        <Label Content="С собой" HorizontalAlignment="Left" Margin="235,163,0,0" VerticalAlignment="Top" Width="86" Height="39" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btZdes" Content="" HorizontalAlignment="Left" Margin="63,53,0,0" VerticalAlignment="Top" Width="100" Height="90" Style="{DynamicResource ButtonPizza}" Click="btZdes_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pizza;component/img/pizza.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btSsob" Content="" HorizontalAlignment="Left" Margin="235,53,0,0" VerticalAlignment="Top" Width="100" Height="90" Click="btSsob_Click" Style="{DynamicResource ButtonPizza}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pizza;component/img/s soboii.jpg"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

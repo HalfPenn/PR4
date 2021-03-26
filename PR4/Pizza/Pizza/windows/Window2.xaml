@@ -1,0 +1,115 @@
+﻿<Window x:Class="Pizza.windows.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza.windows"
+        mc:Ignorable="d"
+        Title="Window2" Height="578" Width="498" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <TextBox x:Name="tbOplata" HorizontalAlignment="Left" Height="390" Margin="10,10,0,0" TextWrapping="Wrap" Text="Ваш заказ :" VerticalAlignment="Top" Width="478" Visibility="Hidden" FontSize="15" FontWeight="Bold"/>
+        <TabControl x:Name="tcMenu" HorizontalAlignment="Left" Height="390" Margin="10,10,0,0" VerticalAlignment="Top" Width="478" TabStripPlacement="Left">
+            <TabItem x:Name="tiPizza" Header="Пицца" HorizontalAlignment="Left" Width="158" Margin="-2,-2,0,-18" Height="130" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF06B244" Style="{DynamicResource TabItemPizza}">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="/Pizza;component/img/pizza.jpg"/>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="bt4Cheese" Content="4 Сыра" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="139" Style="{DynamicResource ButtonPizza}" Click="bt4Cheese_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/img/4cheese.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="Пеперони" HorizontalAlignment="Left" Margin="154,0,0,0" VerticalAlignment="Top" Width="148" Height="139" Style="{DynamicResource ButtonPizza}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/img/PP.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lb4Cheese" Content="499 руб." HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Height="39" Width="149" Foreground="#FFD41010"/>
+                    <Label x:Name="lbPP" Content="599 руб." HorizontalAlignment="Left" Margin="154,139,0,0" VerticalAlignment="Top" Width="148" Height="39" Foreground="#FFD40808"/>
+                    <Button x:Name="btDiablo" Content="Диабло" HorizontalAlignment="Left" Margin="0,196,0,0" VerticalAlignment="Top" Width="149" Height="139" Foreground="#FF0E0D0D" Style="{DynamicResource ButtonPizza}" Click="btDiablo_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/img/diablo.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btAnanas" Content="Гавайская" HorizontalAlignment="Left" Margin="154,196,0,0" VerticalAlignment="Top" Width="148" Height="139" Style="{DynamicResource ButtonPizza}" Click="btAnanas_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/img/4cheese.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lbDiablo" Content="699 руб." HorizontalAlignment="Left" Margin="0,335,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFD40A0A"/>
+                    <Label x:Name="lbAnans" Content="599 руб." HorizontalAlignment="Left" Margin="154,335,0,0" VerticalAlignment="Top" Width="148" Height="34" Foreground="#FFE00808"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tiNap" Header="Напитки" HorizontalAlignment="Left" Width="158" Height="130" VerticalAlignment="Bottom" Margin="0,-2,0,2" FontSize="18" FontWeight="Bold" Foreground="#FF0DA845" Style="{DynamicResource TabItemPizza}">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="/Pizza;component/img/drink.jpg"/>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5" Margin="0,0,-4,-2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="73*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btFanta" Content="Fanta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="139" Grid.ColumnSpan="2" Click="btFanta_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgNap/fanta.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btKola" Content="Coca-Cola" Grid.Column="1" HorizontalAlignment="Left" Margin="149,0,0,0" VerticalAlignment="Top" Width="149" Height="139" RenderTransformOrigin="0.629,0.523" Click="btKola_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgNap/kola.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lbFanta" Content="69 руб." HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Width="149" Grid.ColumnSpan="2" Height="39" Foreground="#FFD40E0E"/>
+                    <Label x:Name="lbKola" Content="69 руб." Grid.Column="1" HorizontalAlignment="Left" Margin="149,139,0,0" VerticalAlignment="Top" Width="149" Height="39" Foreground="#FFE20E0E"/>
+                    <Button x:Name="btSprite" Content="Sprite" HorizontalAlignment="Left" Margin="0,183,0,0" VerticalAlignment="Top" Width="149" Height="139" Grid.ColumnSpan="2" Click="btSprite_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgNap/sprite1.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btMors" Content="Морс клюква" HorizontalAlignment="Left" Margin="149,183,0,0" VerticalAlignment="Top" Width="149" Height="139" Grid.Column="1" Click="btMors_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgNap/mors.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lbSprite" Content="69 руб." Grid.Column="1" HorizontalAlignment="Left" Margin="0,322,0,0" VerticalAlignment="Top" Width="141" Foreground="#FFE20C0C"/>
+                    <Label x:Name="lbMors" Content="39 руб." Grid.Column="1" HorizontalAlignment="Left" Margin="149,322,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFE20C0C"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tiSnack" Header="Снеки" HorizontalAlignment="Left" Width="158" Margin="-2,-10,0,-51" Foreground="#FF10B64C" FontSize="18" FontWeight="Bold" Style="{DynamicResource TabItemPizza}">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="/Pizza;component/img/fre.jpg"/>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="138"/>
+                    <Button x:Name="btFri" Content="Фри" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="138" Margin="154,0,0,0" Click="btFri_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgSnack/fri.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btDer" Content="По-деревенски" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="138" Click="btDer_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgSnack/derevenski.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btLuk" Content="Лук.Кольца" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="138" Margin="0,202,0,0" Click="btLuk_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgSnack/luk.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btSir" Content="Сыр.Палочки" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Height="138" Margin="154,202,0,0" Click="btSir_Click" Style="{DynamicResource ButtonPizza}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Pizza;component/ImgSnack/sirnie.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lbDer" Content="79 руб." HorizontalAlignment="Left" Margin="0,138,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFE60909"/>
+                    <Label x:Name="lbFri" Content="79 руб." HorizontalAlignment="Left" Margin="154,138,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFE41313"/>
+                    <Label x:Name="lbLuk" Content="99 руб." HorizontalAlignment="Left" Margin="0,340,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFD60F0F"/>
+                    <Label x:Name="lbSir" Content="119 руб." HorizontalAlignment="Left" Margin="154,340,0,0" VerticalAlignment="Top" Width="149" Foreground="#FFE20909"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btOpl" Content="ОПЛАТИТЬ" HorizontalAlignment="Left" Margin="156,482,0,0" VerticalAlignment="Top" Width="184" Height="64" FontSize="20" FontWeight="Bold" Foreground="#FF211D1D" Background="#FFEC9E15" Click="btOpl_Click_1"/>
+        <TextBox x:Name="tbItog" HorizontalAlignment="Left" Height="23" Margin="378,523,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+
+    </Grid>
+</Window>
